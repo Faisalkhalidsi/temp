@@ -120,8 +120,8 @@ function process_one()
     $update_id  = 0;
     echo "-";
  
-    if (file_exists("/var/www/html/newCRM/last_update_id")) 
-        $update_id = (int)file_get_contents("/var/www/html/newCRM/last_update_id");
+    if (file_exists("last_update_id")) 
+        $update_id = (int)file_get_contents("last_update_id");
  
     $updates = get_updates($update_id);
     // jika debug=0 atau debug=false, pesan ini tidak akan dimunculkan
